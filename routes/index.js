@@ -2,26 +2,16 @@ var express = require('express');
 var router = express.Router();
 var Mock = require('mockjs')
 
-const generateData = () => {
+const generateData = (urljson) => {
   // 使用Mock.mock方法来生成mock数据
-  return Mock.mock({
-    "code": 200,
-    "data": [
-      {
-        "id": "123",
-        "title": "123",
-        "author": "123",
-        "volume": "123",
-        "createAt": "123"
-      }
-    ]
-  })
+  return Mock.mock(urljson)
 }
 
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.json(generateData())
+router.use('/', function (req, res, next) {
+  let urljson = require('../mock' + req.url)
+  res.json(generateData(urljson))
 });
 
 module.exports = router;
