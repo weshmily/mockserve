@@ -1,8 +1,8 @@
 {
-    "code": 200,
-    "data": [
-      {
-        "mockserve": "welcome mockserve"
-      }
-    ]
-  }
+  "code": 200,
+  "data": [
+    {
+      "mockserve": "welcome mockserve"
+    }
+  ]
+}
