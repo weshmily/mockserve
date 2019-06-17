@@ -2,7 +2,14 @@
   "code": 200,
   "data": [
     {
-      "mockserve": "welcome mockserve"
+      "mockserve": "welcome MockServe"
+    },
+    {
+      "mockserve|3": [
+        "Hello",
+        "MockServe",
+        "!"
+      ]
     }
   ]
 }

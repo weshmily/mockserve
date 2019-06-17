@@ -29,10 +29,11 @@ router.use('/', function (req, res, next) {
         } else {
           try {
             let fileResult = files.find(function (filename) {
-              return filename.slice(0, filename.lastIndexOf('.')) === path.parse(req.url).name
+              return filename.slice(0, filename.lastIndexOf('.')) === path.parse(req.url).base
             });
-
+            // console.log(fileResult)
             if (fileResult) {
+
               if (path.parse(fileResult).ext === '.json') {
                 let urljson = require('../mock' + req.url + '.json')
                 res.json(generateData(urljson))
