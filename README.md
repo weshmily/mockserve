@@ -1,6 +1,6 @@
 # mockserve
 
-> 用于前后分离时模拟数据的mockserve系统，解决了mockjs直接引入无法在Network里无法调试的问题
+> 用于前后分离时模拟数据的mockserve系统，前后端并行开发的利器,解决了mockjs直接引入无法在Network里无法调试的问题
 
 ### 下载地址: 
 ```
