@@ -1,6 +1,6 @@
 const Mock = require('mockjs')
 let data = Mock.mock({
-    "mockserve|3": [
+    "mockserve|4": [
         "welcome",
         "MockServe"
     ]

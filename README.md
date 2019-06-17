@@ -27,6 +27,7 @@ http://localhost:3000/mockserve
  - 创建的json文件代码会自动加载到Mock.mock()里面,这样有一个弊端就是只能加载数据模板不能编写数据占位符
  - 创建的js文件是一个完整mock代码片段,可以完整的编写mock全部功能
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190617113523253.gif)
 
 ## 作者
 #### 作者: weshmily科技站长
