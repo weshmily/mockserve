@@ -12,12 +12,10 @@ const generateData = (urljson) => {
 /* GET home page. */
 router.use('/', function (req, res, next) {
   // console.log(req.url[req.url.length - 1])
-  if (req.url[req.url.length - 1] === '/') {
+  if (req.path[req.path.length - 1] === '/') {
     res.json('url结尾不能为 / 而且 地址不能只写到端口号')
   } else {
-
-    var filePath = path.resolve('./mock' + path.parse(req.url).dir);
-
+    var filePath = path.resolve('./mock' + path.parse(req.path).dir);
     fs.readdir(filePath, function (err, files) {
       if (err) {
         console.warn(err)
@@ -25,24 +23,24 @@ router.use('/', function (req, res, next) {
       } else {
         //遍历读取到的文件列表
         if (files.length === 0) {
-          res.send('在 ./mock' + path.parse(req.url).dir + ' 文件夹没有找到对应文件')
+          res.send('在 ./mock' + path.parse(req.path).dir + ' 文件夹没有找到对应文件')
         } else {
           try {
             let fileResult = files.find(function (filename) {
-              return filename.slice(0, filename.lastIndexOf('.')) === path.parse(req.url).base
+              return filename.slice(0, filename.lastIndexOf('.')) === path.parse(req.path).base
             });
             // console.log(fileResult)
             if (fileResult) {
 
               if (path.parse(fileResult).ext === '.json') {
-                let urljson = require('../mock' + req.url + '.json')
+                let urljson = require('../mock' + req.path + '.json')
                 res.json(generateData(urljson))
               } else {
-                let urljson = require('../mock' + req.url + '.js')
+                let urljson = require('../mock' + req.path + '.js')
                 res.send(urljson)
               }
             } else {
-              res.send('在 ./mock' + path.parse(req.url).dir + ' 文件夹没有找到对应文件')
+              res.send('在 ./mock' + path.parse(req.path).dir + ' 文件夹没有找到对应文件')
             }
           } catch (error) {
             console.log(error)
