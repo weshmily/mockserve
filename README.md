@@ -30,8 +30,8 @@ http://localhost:3000/mockserve
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190617113523253.gif)
 
 ## 作者
-#### 作者: weshmily前端
-#### 官网: 百度搜索([weshmily前端](http://weareshmily.top/ "weshmily前端"))
+#### 作者: 前端小孟
+#### 官网: 百度搜索([前端小孟](http://weareshmily.top/ "前端小孟"))
 #### CSDN博客:http://blog.csdn.net/qq_27118895
 #### GitHub: https://github.com/weshmily
 #### 公众号:搜索"weshmilyqd"
